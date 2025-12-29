@@ -17,7 +17,7 @@ A small collection of browser-based arcade games built with HTML, CSS, and vanil
 - JavaScript (ES6)
 
 ## How to Run
-1. Open `index.html` in a modern browser.
+1. Open `Tetris/index.html` in a modern browser.
 2. Press Enter or click Start to begin.
 
 Tip: You can use any local static server if you prefer (for example, VS Code Live Server).
@@ -30,7 +30,7 @@ Tip: You can use any local static server if you prefer (for example, VS Code Liv
 - Pause/Resume: P / Enter
 
 ## Project Structure
-- `index.html` - layout and UI shell
-- `styles.css` - visual theme and layout styling
-- `main.js` - gameplay logic and rendering
-- `plan.md` - project planning notes
+- `Tetris/index.html` - layout and UI shell
+- `Tetris/styles.css` - visual theme and layout styling
+- `Tetris/main.js` - gameplay logic and rendering
+- `Tetris/plan.md` - project planning notes
