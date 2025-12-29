@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contra Clash</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <header class="mast">
+      <div class="title">
+        <p class="tag">Arcade Ops</p>
+        <h1>Contra Clash</h1>
+        <p class="sub">Combo-driven combat inspired by classic run-and-gun action.</p>
+      </div>
+      <div class="mast-actions">
+        <button class="btn primary" id="primaryAction" type="button">Start</button>
+        <button class="btn ghost" id="resetButton" type="button">Reset</button>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="stage">
+        <div class="hud">
+          <div class="hud-block">
+            <span class="label">Player</span>
+            <div class="bar">
+              <span id="playerHealth"></span>
+            </div>
+            <span class="value" id="playerHpText">100</span>
+          </div>
+          <div class="hud-center">
+            <div class="combo-box">
+              <span class="label">Combo</span>
+              <strong id="comboCount">0</strong>
+              <span class="combo-name" id="comboName">-</span>
+            </div>
+            <div class="status-chip" id="statusChip">IDLE</div>
+          </div>
+          <div class="hud-block">
+            <span class="label">Enemy</span>
+            <div class="bar enemy">
+              <span id="enemyHealth"></span>
+            </div>
+            <span class="value" id="enemyHpText">100</span>
+          </div>
+        </div>
+
+        <div class="arena">
+          <canvas id="arena" width="960" height="540"></canvas>
+          <div class="overlay" id="overlay">
+            <div class="overlay-card">
+              <span class="overlay-tag" id="overlayEyebrow">Mission</span>
+              <h2 id="overlayTitle">Press Enter</h2>
+              <p id="overlaySubtitle">Lock and load. Keep combos alive to break the enemy.</p>
+              <button class="btn primary" id="overlayButton" type="button">Start Mission</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="hint-row">
+          <span class="pill">Move: A / D or Arrow Keys</span>
+          <span class="pill">Jump: W or Up</span>
+          <span class="pill">Light: J</span>
+          <span class="pill">Heavy: K</span>
+          <span class="pill">Blaster: L</span>
+          <span class="pill">Pause: Enter or P</span>
+        </div>
+      </section>
+
+      <aside class="intel">
+        <div class="panel">
+          <h3>Combo Routes</h3>
+          <ul>
+            <li>J, J, K - Blaster Uppercut</li>
+            <li>J, K, J - Spiral Kick</li>
+            <li>K, K, J - Breaker Shot</li>
+          </ul>
+          <p class="note">Keep hits within the combo window to ramp damage.</p>
+        </div>
+        <div class="panel">
+          <h3>Tactics</h3>
+          <p>Stay close to chain hits, then finish with a heavy attack or a special combo. Use the blaster to keep pressure when you reset.</p>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
