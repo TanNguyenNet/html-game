@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Neon Stacks</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <header class="hero">
+      <div class="title-block">
+        <p class="eyebrow">Arcade Build 01</p>
+        <h1>Neon Stacks</h1>
+        <p class="subhead">Fast drops, clean clears, rising tempo.</p>
+      </div>
+      <div class="hero-actions">
+        <button class="btn-primary" id="primaryAction" type="button">Start</button>
+        <div class="status-chip" id="statusChip">IDLE</div>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="board-panel">
+        <div class="board-wrap">
+          <canvas id="game" width="320" height="640"></canvas>
+          <div class="overlay" id="overlay">
+            <div class="overlay-card">
+              <h2 id="overlayTitle">Press Enter</h2>
+              <p id="overlaySubtitle">Start the run and chase the tempo.</p>
+              <button class="btn-primary" id="overlayButton" type="button">Start Game</button>
+            </div>
+          </div>
+        </div>
+        <div class="hint-row">
+          <span class="pill">Move: Arrow Keys</span>
+          <span class="pill">Rotate: Up / X / Z</span>
+          <span class="pill">Hard Drop: Space</span>
+          <span class="pill">Pause: P / Enter</span>
+        </div>
+      </section>
+
+      <aside class="side-panel">
+        <div class="stat-grid">
+          <div class="stat">
+            <span class="label">Score</span>
+            <strong id="score">0</strong>
+          </div>
+          <div class="stat">
+            <span class="label">Level</span>
+            <strong id="level">0</strong>
+          </div>
+          <div class="stat">
+            <span class="label">Lines</span>
+            <strong id="lines">0</strong>
+          </div>
+          <div class="stat">
+            <span class="label">Drop</span>
+            <strong id="speed">1000ms</strong>
+          </div>
+        </div>
+
+        <div class="next-panel">
+          <div class="panel-title">
+            <h3>Next</h3>
+            <span class="tag">Queue</span>
+          </div>
+          <canvas id="next" width="180" height="360"></canvas>
+        </div>
+
+        <div class="control-panel">
+          <h3>Goals</h3>
+          <p>Clear lines to raise the level. Speed tightens each time the level climbs.</p>
+          <div class="control-actions">
+            <button class="btn-ghost" id="resetButton" type="button">Reset Run</button>
+          </div>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
